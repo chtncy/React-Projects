@@ -1,16 +1,39 @@
-# React + Vite
+📝 Modern To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, modern, and responsive React + Vite to-do list application.
+Features a clean UI with task creation, deletion, and reordering.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Add and delete tasks
 
-## React Compiler
+⬆️⬇️ Move tasks up and down
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+🎨 Modern, responsive, and accessible design
 
-## Expanding the ESLint configuration
+⚡ Built with Vite + React for fast development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📦 Installation
+# clone the project
+git clone https://github.com/username/todo-list.git
+cd todo-list
+
+# install dependencies
+npm install
+
+# run the app
+npm run dev
+
+🛠️ Built With
+
+  React → for building UI components (useState, useRef, JSX)
+
+  Vite → fast development server and build tool
+
+  JavaScript (ES6+) → core logic and state management
+
+  HTML5 → semantic structure
+
+  CSS3 → custom styling, Flexbox for layout, transitions for hover effects
+
+  HSL Color System → modern color palette with hover animations
