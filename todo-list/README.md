@@ -1,7 +1,7 @@
 📝 Modern To-Do List
 
-A simple, modern, and responsive React + Vite to-do list application.
-Features a clean UI with task creation, deletion, and reordering.
+-  A simple, modern, and responsive React + Vite to-do list application. Features a clean UI with task creation, deletion, and reordering.
+
 
 🚀 Features
 
@@ -13,27 +13,20 @@ Features a clean UI with task creation, deletion, and reordering.
 
 ⚡ Built with Vite + React for fast development
 
-📦 Installation
-# clone the project
-git clone https://github.com/username/todo-list.git
-cd todo-list
-
-# install dependencies
-npm install
-
-# run the app
-npm run dev
 
 🛠️ Built With
 
-  React → for building UI components (useState, useRef, JSX)
+-  React → for building UI components (useState, useRef, JSX)
+-  
+-  Vite → fast development server and build tool
+-  
+-  JavaScript (ES6+) → core logic and state management
 
-  Vite → fast development server and build tool
+-  HTML5 → semantic structure
 
-  JavaScript (ES6+) → core logic and state management
+-  CSS3 → custom styling, Flexbox for layout, transitions for hover effects
 
-  HTML5 → semantic structure
+-  HSL Color System → modern color palette with hover animations
 
-  CSS3 → custom styling, Flexbox for layout, transitions for hover effects
 
-  HSL Color System → modern color palette with hover animations
+Project Link : https://peppy-gnome-4cf503.netlify.app/
