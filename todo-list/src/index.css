@@ -1,0 +1,160 @@
+/* Modern ToDo styles (copy into styles.css) */
+
+/* variables */
+:root{
+  --bg: hsl(216 14% 11%);
+  --panel: hsl(215 18% 16%);
+  --card: hsl(0 0% 98%);
+  --muted: hsl(220 8% 72%);
+  --accent: hsl(145 60% 44%);
+  --accent-600: hsl(145 60% 38%);
+  --primary: hsl(210 90% 64%);
+  --danger: hsl(10 90% 50%);
+  --surface-border: rgba(255,255,255,0.06);
+  --radius: 12px;
+  --gap: 12px;
+  --container-w: 820px;
+  --shadow-soft: 0 8px 24px rgba(2,6,23,0.45);
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:var(--bg); color: #f7f7f8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+/* app shell */
+.todo-app{
+  max-width:var(--container-w);
+  margin:48px auto;
+  padding:22px;
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: var(--shadow-soft);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:12px;
+  margin-bottom:18px;
+}
+.header h1{
+  margin:0;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  color:white;
+  letter-spacing: -0.02em;
+}
+.subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* controls */
+.controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:16px;
+}
+.input{flex:1; display:flex;}
+.input input[type="text"]{
+  width:100%;
+  padding:12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--surface-border);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+  font-size:1rem;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease, transform .08s ease;
+}
+.input input::placeholder{ color: rgba(255,255,255,0.5); }
+.input input:focus{
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 8px 30px rgba(20,120,80,0.06);
+  transform: translateY(-1px);
+}
+
+/* buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+  transition: transform .08s ease, filter .12s ease;
+}
+.btn:active{ transform: translateY(1px); }
+.btn:disabled{ opacity: .45; cursor: not-allowed; transform:none; }
+
+.btn--add{
+  background: linear-gradient(180deg, var(--accent), var(--accent-600));
+  min-height:44px;
+  padding: 0 18px;
+}
+.btn--add:hover{ filter:brightness(1.03); transform: translateY(-2px); }
+
+.btn--move{
+  background: linear-gradient(180deg, var(--primary), color-mix(in srgb, var(--primary) 80%, black 12%));
+  padding: 8px 10px;
+  border-radius:8px;
+  min-width:44px;
+}
+.btn--move:hover{ filter:brightness(1.03); }
+
+.btn--delete{
+  background: linear-gradient(180deg, var(--danger), color-mix(in srgb, var(--danger) 80%, black 12%));
+  padding:8px 10px;
+  border-radius:8px;
+}
+.btn--delete:hover{ filter:brightness(0.96); }
+
+/* list */
+.list-wrap{ margin-top:8px; }
+.task-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:12px;
+}
+.task-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px;
+  background: var(--card);
+  border-radius:12px;
+  border: 1px solid rgba(2,6,23,0.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  color:#111;
+}
+
+/* left area */
+.task-left{ flex:1; display:flex; align-items:center; gap:12px; }
+.task-text{ font-weight:600; font-size:1rem; color: #111; word-break:break-word; }
+
+/* right controls */
+.item-controls{ display:flex; gap:8px; align-items:center; }
+
+/* empty state */
+.empty{ color:var(--muted); padding: 18px 8px; text-align:center; }
+
+/* responsive */
+@media (max-width:640px){
+  .todo-app{ margin:18px; padding:14px; border-radius:10px;}
+  .header{flex-direction:column; align-items:flex-start; gap:6px}
+  .controls{flex-direction:column; align-items:stretch}
+  .btn--add{width:100%}
+  .task-item{flex-direction:column; align-items:flex-start}
+  .item-controls{ width:100%; display:flex; justify-content:space-between; margin-top:8px }
+}
